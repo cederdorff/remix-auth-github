@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "remix-auth-github",
   "private": true,
   "sideEffects": false,
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
-    "dev": "remix vite:dev",
+    "dev": "remix vite:dev --port 3000",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js"
   },
@@ -15,7 +15,9 @@
     "@remix-run/serve": "^2.8.1",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remix-auth": "^3.6.0",
+    "remix-auth-github": "^1.7.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.8.1",
