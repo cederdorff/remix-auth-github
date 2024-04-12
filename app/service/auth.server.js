@@ -2,7 +2,7 @@ import { GitHubStrategy } from "remix-auth-github";
 import { Authenticator } from "remix-auth";
 import { sessionStorage } from "./session.server";
 
-let gitHubStrategy = new GitHubStrategy(
+const gitHubStrategy = new GitHubStrategy(
   {
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
@@ -17,5 +17,5 @@ let gitHubStrategy = new GitHubStrategy(
   }
 );
 
-export let authenticator = new Authenticator(sessionStorage);
+export const authenticator = new Authenticator(sessionStorage);
 authenticator.use(gitHubStrategy);
