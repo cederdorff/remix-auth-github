@@ -12,11 +12,12 @@ export async function loader({ request }) {
 
 export default function Index() {
   const { user } = useLoaderData();
+  console.log(user);
 
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome {user.displayName}</h1>
-      <img src={user._json.avatar_url} alt="" />
+      <img src={user._json.avatar_url} alt={user.displayName} />
       <h2>{user._json.name}</h2>
       <p>{user._json.bio}</p>
       <p>
